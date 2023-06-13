@@ -190,7 +190,7 @@ input[type="text"]
     margin-left: 8rem;
 }
 .newsletter-wrapper{
-    background: url(https://img.freepik.com/premium-photo/yellow-envelope-gray-background-top-view-copy-space_93675-99786.jpg);
+    background: url(../imgs/newsletter-cover.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 13rem;
@@ -324,9 +324,6 @@ input[type="text"]
     }
     .nav-center-btn a{
         padding-bottom: 20px;
-    }
-    footer{
-        
     }
 }
 @media screen and (min-width: 50px) and (max-width: 1024px) {
