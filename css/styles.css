@@ -90,7 +90,7 @@ header {
 
 .brand-link a {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 5vh;
+  font-size: calc(60px - 1vh);
 }
 
 .brand-logo {
@@ -120,7 +120,7 @@ nav {
   column-gap: 12rem;
 }
 .nav-center-btn a {
-  font-size: 3vh;
+  font-size: calc(60px - 3vh);
 }
 
 .nav-center-btn a {
@@ -132,10 +132,6 @@ nav {
 }
 
 /* MAIN */
-main {
-  min-height: calc(100vh - 800px);
-}
-
 .bg-intro {
   background-size: cover;
   height: 1200px;
@@ -146,7 +142,7 @@ main {
 }
 .bg-intro h1 {
   color: white;
-  font-size: 12vh;
+  font-size: 120px;
   font-family: "Bebas Neue", sans-serif;
 }
 .bg-intro h3 {
@@ -216,7 +212,7 @@ main {
   align-items: center;
   margin-top: 13rem;
   margin-bottom: 3.2rem;
-  font-size: 12vh;
+  font-size: 120px;
 }
 .title-intro h1 {
   display: flex;
@@ -246,10 +242,10 @@ main {
 }
 
 .box-intro-style h2 {
-  font-size: 7.2vh;
+  font-size: 72px;
 }
 .box-intro-style p {
-  font-size: 3.5294117647vh;
+  font-size: 35.2941176471px;
 }
 
 .intro-p {
@@ -259,7 +255,7 @@ main {
 }
 .intro-p h2 {
   text-align: center;
-  font-size: 7.2vh;
+  font-size: 72px;
   color: white;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -267,7 +263,7 @@ main {
   text-align: center;
   font-size: 15px;
   margin-top: 1rem;
-  font-size: 6vh;
+  font-size: 60px;
   font-family: "Bebas Neue", sans-serif;
   border-bottom: 2px solid white;
 }
@@ -555,16 +551,17 @@ footer hr {
   .nav-grid-btn {
     display: grid;
     place-items: center;
+    column-gap: 0;
   }
   .nav-center-btn {
     display: flex;
     gap: 10px;
   }
-  .nav-center-btn a {
-    padding-bottom: 10px;
-  }
 }
 @media screen and (max-width: 1024px) {
+  .nav-grid-btn {
+    column-gap: 2rem;
+  }
   .title-intro {
     display: flex;
     justify-content: center;
@@ -601,12 +598,17 @@ footer hr {
 }
 @media screen and (max-width: 500px) {
   footer {
-    height: 2800px;
+    height: 1500px;
   }
 }
 @media screen and (max-width: 320px) {
   .text-cover {
     margin-top: 5rem;
+  }
+  .nav-grid-btn {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
   }
 }
 @media screen and (min-width: 50px) and (max-width: 1024px) {

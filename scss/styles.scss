@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-$fontsizedefault: 6vh;
+$fontsizedefault: 60px;
 * {
   margin: 0;
   padding: 0;
@@ -129,9 +129,6 @@ nav {
 }
 
 /* MAIN */
-main{
-  min-height: calc(100vh - 800px);
-}
 .bg-intro {
   background-size: cover;
   height: 1200px;
@@ -535,16 +532,17 @@ footer hr {
   .nav-grid-btn {
     display: grid;
     place-items: center;
+    column-gap: 0;
   }
   .nav-center-btn {
     display: flex;
     gap: 10px;
   }
-  .nav-center-btn a {
-    padding-bottom: 10px;
-  }
 }
 @media screen and (max-width: 1024px) {
+    .nav-grid-btn{
+      column-gap: 2rem;
+    }
     .title-intro{
       display: flex;
       justify-content: center;
@@ -581,12 +579,17 @@ footer hr {
 }
 @media screen and (max-width: 500px){
   footer{
-    height: 2800px;
+    height: 1500px;
   }
 }
 @media screen and (max-width: 320px){
   .text-cover{
     margin-top: 5rem;
+  }
+  .nav-grid-btn{
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
   }
 }
 @media screen and (min-width: 50px) and (max-width: 1024px) {
