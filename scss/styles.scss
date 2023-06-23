@@ -30,6 +30,7 @@ main {
 html, body {
   width: 100%;
   display: table;
+  height: 100%;
 }
 
 body {
@@ -132,10 +133,12 @@ main{
   min-height: calc(100vh - 800px);
 }
 .bg-intro {
-  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1200px;
   background: url(../imgs/assets/animate-cover1.jpg);
   display: flex;
   justify-content: center;
+  align-items: center;
   h1 {
     color: white;
     font-size: $fontsizedefault*2;
@@ -147,12 +150,11 @@ main{
     font-family: "Bebas Neue", sans-serif;
     color: lightcyan;
   }
-  align-items: center;
-}
-.bg-intro .text-cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .text-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .flex-text-intro {
   display: flex;
@@ -210,6 +212,11 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(
   margin-top: 13rem;
   margin-bottom: 3.2rem;
   font-size: $fontsizedefault*2;
+  h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .intro-style {
@@ -220,14 +227,14 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(
   margin-bottom: 3.2rem;
   h2 {
     text-align: center;
-    color: black;
+    color: white;
     font-family: "Bebas Neue", sans-serif;
   }
   p {
     font-size: 15px;
     margin-top: 1rem;
     text-align: center;
-    color: black;
+    color: white;
     font-family: "Bebas Neue", sans-serif;
     border-bottom: 2px solid white;
   }
@@ -237,16 +244,26 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(
     font-size: $fontsizedefault*1.2;
   }
   p{
-    font-size: $fontsizedefault;
+    font-size: calc($fontsizedefault/1.7);
   }
 }
-
 .intro-p {
   flex-direction: column;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  h2 {
+    text-align: center;
+    font-size: $fontsizedefault*1.2;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+  }
   p {
     text-align: center;
+    font-size: 15px;
+    margin-top: 1rem;
+    font-size: $fontsizedefault;
+    font-family: "Bebas Neue", sans-serif;
+    border-bottom: 2px solid white;
   }
 }
 /* contacto */
@@ -586,6 +603,3 @@ footer hr {
     align-items: center;
   }
 }
-
-
-/*# sourceMappingURL=styles.scss.map */
