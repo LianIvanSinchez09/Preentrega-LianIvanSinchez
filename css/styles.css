@@ -503,6 +503,20 @@ footer hr {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 425px) {
+  .bg-intro h1 {
+    text-align: left;
+  }
+  .bg-intro h3 {
+    text-align: left;
+  }
+  .intro-style p, .intro-style h2 {
+    text-align: left;
+  }
+  .intro-p p, .intro-p h2 {
+    text-align: left;
+  }
+}
 @media only screen and (min-width: 701px) {
   /* hide the hamburger */
   .hamburger {
@@ -525,12 +539,6 @@ footer hr {
   }
 }
 @media screen and (max-width: 878px) {
-  .bg-intro p {
-    text-align: center;
-  }
-  .bg-intro h1 {
-    text-align: center;
-  }
   .flex-text-intro {
     margin-top: 20rem;
   }

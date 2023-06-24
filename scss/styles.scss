@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 $fontsizedefault: 60px;
+
 * {
   margin: 0;
   padding: 0;
@@ -174,7 +176,7 @@ nav {
   flex-direction: column;
   align-items: center;
   background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(0,0,0,1) 100%);
 }
 
 .intro-group h1 {
@@ -494,6 +496,26 @@ footer hr {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 425px) {
+  .bg-intro{
+    h1{
+      text-align: left;
+    }
+    h3{
+      text-align: left;
+    }
+  }
+  .intro-style{
+    p, h2{
+      text-align: left;
+    }
+  }
+  .intro-p{
+    p,h2{
+      text-align: left;
+    }
+  }
+}
 @media only screen and (min-width: 701px) {
   /* hide the hamburger */
   .hamburger {
@@ -517,23 +539,15 @@ footer hr {
   }
 }
 @media screen and (max-width: 878px) {
-  // .bg-intro {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
+  // .bg-intro p {
+  //   text-align: center;
   // }
-  .bg-intro p {
-    text-align: center;
-  }
-  .bg-intro h1 {
-    text-align: center;
-  }
+  // .bg-intro h1 {
+  //   text-align: center;
+  // }
   .flex-text-intro {
     margin-top: 20rem;
   }
-  // .nav-center-btn{
-  //   column-gap: 4rem;
-  // }
 }
 @media screen and (max-width: 1024px) {
     // .nav-grid-btn{
