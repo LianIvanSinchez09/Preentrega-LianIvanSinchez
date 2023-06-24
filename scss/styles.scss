@@ -100,7 +100,7 @@ nav {
 .main-nav-btn{
   a{
     color: white;
-    font-size: $fontsizedefault/2;
+    font-size: calc($fontsizedefault/2);
   }
 }
 
@@ -165,13 +165,16 @@ nav {
 }
 
 .container-intro {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background: rgb(0,0,0);
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(85,28,28,1) 49%, rgba(0,0,0,1) 100%);
+  iframe{
+    margin-top: 10rem;
+  }
 }
 
 .intro-group h1 {
@@ -514,6 +517,14 @@ footer hr {
       text-align: left;
     }
   }
+  .box-intro-style{
+    h2{
+      font-size: calc($fontsizedefault - 15px);
+    }
+    p{
+      font-size: calc($fontsizedefault - 25px);
+    }
+  }
 }
 @media only screen and (min-width: 701px) {
   /* hide the hamburger */
@@ -571,7 +582,6 @@ footer hr {
     grid-template-columns: repeat(1);
     column-gap: 12rem;
     a{
-     font-size: $fontsizedefault/2;
      color: white;
    }
  }
