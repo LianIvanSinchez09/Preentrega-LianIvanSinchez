@@ -217,6 +217,7 @@ nav {
   }
 }
 .box-intro-style {
+  
   h2{
     font-size: $fontsizedefault*1.2;
   }
@@ -228,6 +229,7 @@ nav {
   flex-direction: column;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  
   h2 {
     text-align: center;
     font-size: $fontsizedefault*1.2;
@@ -240,7 +242,6 @@ nav {
     margin-top: 1rem;
     font-size: $fontsizedefault;
     font-family: "Bebas Neue", sans-serif;
-    border-bottom: 2px solid white;
   }
 }
 /* contacto */
@@ -494,9 +495,15 @@ footer hr {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 50px) and (max-width: 963px) {
   nav{
     width: auto;
+  }
+  .container-intro{
+    iframe{
+      margin-top: 10px;
+      width: 300px;
+    }
   }
   .bg-intro{
     width: auto;
@@ -507,9 +514,15 @@ footer hr {
       text-align: left;
     }
   }
+  .title-intro{
+    justify-content: left;
+    align-items: start;
+  }
   .intro-style{
     p, h2{
+      font-size: calc($fontsizedefault - 10px);
       text-align: left;
+      border-bottom: 0px;
     }
   }
   .intro-p{
@@ -519,10 +532,11 @@ footer hr {
   }
   .box-intro-style{
     h2{
-      font-size: calc($fontsizedefault - 15px);
+      font-size: calc($fontsizedefault - 20px);
+      border-bottom: 0px;
     }
     p{
-      font-size: calc($fontsizedefault - 25px);
+      font-size: calc($fontsizedefault - 35px);
     }
   }
 }
@@ -565,11 +579,6 @@ footer hr {
     // flex-direction: column;
     // column-gap: 0;
     // }
-    .title-intro{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
     .intro-style{
       display: flex;
       flex-direction: column;
@@ -593,8 +602,7 @@ footer hr {
   place-content: start;
   button{
     margin-top: 2rem;
-  }
-  button{
+    margin-left: 50rem;
     height: 70px;
     width: 50px;
   }
@@ -621,11 +629,6 @@ footer hr {
 @media screen and (min-width: 320px) and (max-width: 878px) {
   .flex-text-intro {
     justify-content: center;
-  }
-}
-@media screen and (max-width: 500px){
-  footer{
-    height: 1500px;
   }
 }
 @media screen and (max-width: 320px){

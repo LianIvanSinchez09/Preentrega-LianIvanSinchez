@@ -241,7 +241,6 @@ nav {
   margin-top: 1rem;
   font-size: 60px;
   font-family: "Bebas Neue", sans-serif;
-  border-bottom: 2px solid white;
 }
 
 /* contacto */
@@ -509,9 +508,13 @@ footer hr {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 50px) and (max-width: 963px) {
   nav {
     width: auto;
+  }
+  .container-intro iframe {
+    margin-top: 10px;
+    width: 300px;
   }
   .bg-intro {
     width: auto;
@@ -522,17 +525,24 @@ footer hr {
   .bg-intro h3 {
     text-align: left;
   }
+  .title-intro {
+    justify-content: left;
+    align-items: start;
+  }
   .intro-style p, .intro-style h2 {
+    font-size: 50px;
     text-align: left;
+    border-bottom: 0px;
   }
   .intro-p p, .intro-p h2 {
     text-align: left;
   }
   .box-intro-style h2 {
-    font-size: 45px;
+    font-size: 40px;
+    border-bottom: 0px;
   }
   .box-intro-style p {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -562,11 +572,6 @@ footer hr {
   }
 }
 @media screen and (max-width: 1024px) {
-  .title-intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .intro-style {
     display: flex;
     flex-direction: column;
@@ -591,8 +596,7 @@ footer hr {
   }
   .nav-grid-btn button {
     margin-top: 2rem;
-  }
-  .nav-grid-btn button {
+    margin-left: 50rem;
     height: 70px;
     width: 50px;
   }
@@ -618,11 +622,6 @@ footer hr {
 @media screen and (min-width: 320px) and (max-width: 878px) {
   .flex-text-intro {
     justify-content: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  footer {
-    height: 1500px;
   }
 }
 @media screen and (max-width: 320px) {
