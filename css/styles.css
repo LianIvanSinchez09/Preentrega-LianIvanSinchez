@@ -103,7 +103,7 @@ nav {
 
 /* MAIN */
 .bg-intro {
-  background-size: cover;
+  background-repeat: no-repeat;
   background: url(../imgs/assets/animate-cover1.jpg);
   padding-top: 50rem;
   padding-bottom: 50rem;
