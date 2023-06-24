@@ -39,6 +39,8 @@ html, body {
   width: 100%;
   display: table;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -72,12 +74,13 @@ form {
 }
 
 /* NAVBAR */
-  header{
-    position: fixed;
-    width: 100%;
-  }
+header{
+  width: 100%;
+  position: fixed;
+}
 nav {
   z-index: 1;
+  position: fixed;
   width: 100%;
   background: rgb(102, 4, 4);
   background: linear-gradient(90deg, rgb(102, 4, 4) 8%, rgb(0, 0, 0) 85%, rgb(93, 2, 2) 100%);
@@ -100,14 +103,6 @@ nav {
     font-size: $fontsizedefault/2;
   }
 }
-
-// .nav-center-btn a {
-//   font-family: "Bebas Neue", sans-serif;
-// }
-
-// .nav-center-btn li {
-//   font-size: 30px;
-// }
 
 /* MAIN */
 .bg-intro {
@@ -497,7 +492,11 @@ footer hr {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 425px) {
+  nav{
+    width: auto;
+  }
   .bg-intro{
+    width: auto;
     h1{
       text-align: left;
     }

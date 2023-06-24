@@ -39,6 +39,8 @@ html, body {
   width: 100%;
   display: table;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -73,12 +75,13 @@ form {
 
 /* NAVBAR */
 header {
-  position: fixed;
   width: 100%;
+  position: fixed;
 }
 
 nav {
   z-index: 1;
+  position: fixed;
   width: 100%;
   background: rgb(102, 4, 4);
   background: linear-gradient(90deg, rgb(102, 4, 4) 8%, rgb(0, 0, 0) 85%, rgb(93, 2, 2) 100%);
@@ -504,6 +507,12 @@ footer hr {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 425px) {
+  nav {
+    width: auto;
+  }
+  .bg-intro {
+    width: auto;
+  }
   .bg-intro h1 {
     text-align: left;
   }
