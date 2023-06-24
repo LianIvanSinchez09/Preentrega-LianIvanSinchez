@@ -8,13 +8,19 @@
 h1, h2, h3, h4, h5, h6, a, a:hover, a:focus, a:active {
   text-decoration: none;
   outline: none;
+  color: white;
 }
 
 a, a:active, a:focus {
-  color: #333;
   text-decoration: none;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
+  text-decoration: none;
+  color: lightgrey;
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
 }
 
 html {
@@ -45,17 +51,6 @@ p {
   font-size: 2rem;
 }
 
-a {
-  text-decoration: none;
-  color: lightgrey;
-  padding: 0;
-  margin: 0;
-}
-
-a:hover {
-  color: white;
-}
-
 ul {
   list-style: none;
 }
@@ -82,22 +77,6 @@ header {
   width: 100%;
 }
 
-.brand-link {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: row;
-}
-
-.brand-link a {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: calc(60px - 1vh);
-}
-
-.brand-logo {
-  min-width: 10px;
-  min-height: 10px;
-}
-
 nav {
   z-index: 1;
   width: 100%;
@@ -107,40 +86,30 @@ nav {
 
 .nav-grid-btn {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   margin: 1rem 0;
   place-items: center;
-  column-gap: 20rem;
+  column-gap: 5rem;
+}
+.nav-grid-btn button {
+  background: rgb(0, 0, 0);
+  border: white;
 }
 
-.nav-center-btn {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 2rem;
-  column-gap: 12rem;
-}
-.nav-center-btn a {
-  font-size: calc(60px - 3vh);
-}
-
-.nav-center-btn a {
-  font-family: "Bebas Neue", sans-serif;
-}
-
-.nav-center-btn li {
+.main-nav-btn a {
+  color: white;
   font-size: 30px;
 }
 
 /* MAIN */
 .bg-intro {
   background-size: cover;
-  height: 1200px;
   background: url(../imgs/assets/animate-cover1.jpg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 50rem;
+  padding-bottom: 50rem;
 }
 .bg-intro h1 {
+  text-align: center;
   color: white;
   font-size: 120px;
   font-family: "Bebas Neue", sans-serif;
@@ -151,7 +120,8 @@ nav {
   font-family: "Bebas Neue", sans-serif;
   color: lightcyan;
 }
-.bg-intro .text-cover {
+
+.title-cover {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -533,12 +503,28 @@ footer hr {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 878px) {
-  .bg-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media only screen and (min-width: 701px) {
+  /* hide the hamburger */
+  .hamburger {
+    display: none;
   }
+  /* show all the nav-buttons */
+  .nav-button {
+    display: block;
+  }
+}
+/* if browser window is small (max-width) */
+@media only screen and (max-width: 700px) {
+  /* show everything with the hamburger class */
+  .hamburger {
+    display: block;
+  }
+  /* hide all the nav-buttons */
+  .nav-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 878px) {
   .bg-intro p {
     text-align: center;
   }
@@ -548,16 +534,8 @@ footer hr {
   .flex-text-intro {
     margin-top: 20rem;
   }
-  .nav-center-btn {
-    column-gap: 4rem;
-  }
 }
 @media screen and (max-width: 1024px) {
-  .nav-grid-btn {
-    display: flex;
-    flex-direction: column;
-    column-gap: 0;
-  }
   .title-intro {
     display: flex;
     justify-content: center;
@@ -567,6 +545,31 @@ footer hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 985px) {
+  .nav-center-btn {
+    display: grid;
+    grid-template-columns: repeat(1);
+    column-gap: 12rem;
+  }
+  .nav-center-btn a {
+    font-size: 30px;
+    color: white;
+  }
+}
+@media screen and (max-width: 991px) {
+  .nav-grid-btn {
+    display: grid;
+    grid-template-columns: 150px 100px;
+    place-content: start;
+  }
+  .nav-grid-btn button {
+    margin-top: 2rem;
+  }
+  .nav-grid-btn button {
+    height: 70px;
+    width: 50px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -601,26 +604,12 @@ footer hr {
   .text-cover {
     margin-top: 5rem;
   }
-  .nav-center-btn {
-    column-gap: 2rem;
-  }
-  .nav-center-btn a {
-    font-size: 31.914893617px;
-  }
-  .nav-grid-btn:nth-child(1) {
-    place-items: start;
-  }
 }
 @media screen and (min-width: 50px) and (max-width: 1024px) {
   .info-grid {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .bg-intro {
-    display: flex;
     justify-content: center;
     align-items: center;
   }
