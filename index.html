@@ -16,150 +16,49 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="nav-grid-btn">
-                <a class="brand-link" href="#">Los Cuatro Alamos</a>
-                <button class="navbar-toggler border-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars fa-fade fa-2x1" style="color: #ffffff;"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto nav-center-btn main-nav-btn">
-                        <li class="nav-item active col">
-                            <a class="nav-link" href="pages/empleados.html">Empleados <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="pages/contacto.html">Contactos</a>
-                        </li>
-                        <li class="nav-item active col">
-                            <a class="nav-link" href="pages/productos.html">Productos <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="pages/newsletter.html">Newsletter</a>
-                        </li>
-                    </ul>
-                </div>
+            <a class="brand-link display-4" href="#">Los Cuatro Alamos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-fade fa-2x1" style="color: #ffffff;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar-links">
+                <a class="nav-item link-nav display-6" href="#">Productos</a>
+                <a class="nav-item link-nav display-6" href="#">Empleados</a>
+                <a class="nav-item link-nav display-6" href="#">Newsletter</a>
+                <a class="nav-item link-nav display-6" href="#">Contactos</a>
+            </div>
             </div>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="bg-intro">
-                <div class="title-cover">
-                    <h1>Los Cuatro Alamos</h1>
-                    <h3>Panadería familiar</h3>
+        <section class="bg-intro">
+            <div class="bg-intro-content">
+              <h1 class="display-1">Los Cuatro Alamos</h1>
+              <p>Panadería familiar</p>
+              <a href="#" class="btn-bg btn-dark">Haga su pedido hoy</a>
+            </div>
+          </section>
+        <section class="container-fluid container-intro">
+            <h1 class="d-flex justify-content-center align-content-center mt-3 display-3">Nuestras Tradiciones</h1>
+            <div class="intro-p">
+                <div class="d-flex flex-column">
+                    <h5 class="display-6 text-center text-white">Envios a todo el país</h5>
+                    <p class="h3 text-center text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="display-6 text-center text-white">Ingredientes elegidos con pasión a la cocina</h5>
+                    <p class="h3 text-center text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- TODO - introduccion-->
-
-        <section class="container-intro">
-            <div class="intro-group">
-                <h1 class="title-intro">Nuestras tradiciones</h1>
-                <div class="intro-style">
-                    <div class="box-intro-style">
-                        <h2>Los mejores panes del país</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                    <div class="box-intro-style mb-2">
-                        <h2>Envíos a todas las provincias</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="intro-p">
-                    <h2>Ingredientes elegidos con amor y pasión</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quisquam.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WfuDrGslXtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <button class="btn"><a href="../proyectocoder/pages/contacto.html">Hace tu pedido hoy</a></button>
+            <div class="intro-p">
+                <div class="d-flex flex-column align-items-center">
+                    <h5 class="display-6 text-center">Abierto las 24 horas</h5>
+                    <p class="h3 text-center text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+                    <iframe class="text-center" width="560" height="315" src="https://www.youtube.com/embed/G3LmiPpjMgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
         <!-- TODO - Video de ejemplo -->
     </main>
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 about-footer">
-                        <h3>Lorem Ipsum dummy text </h3>
-                        <ul>
-                            <li><a href="tel:(010) 1234 4321"><i class="fas fa-phone fa-flip-horizontal"></i>(010) 1234 4321</a></li>
-                            <li><i class="fas fa-map-marker-alt"></i>
-                                1 / 105 Bay Lights,
-                                <br/>Lorem Ipsum,
-                                <br/>LIC 3201
-                            </li>
-                        </ul>
-                        <a href="" class="btn red-btn">Book Now</a>
-                    </div>
-                    <div class="col-md-6 col-lg-2 page-more-info">
-                        <div class="footer-title">
-                            <h4>Page links</h4>
-                        </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="col-md-6 col-lg-3 page-more-info">
-                        <div class="footer-title">
-                            <h4>More Info</h4>
-                        </div>
-                        <ul>
-                            <li><a href="#">Lorem ipsum</a></li>
-                            <li><a href="#">Dolor sit amet</a></li>
-                            <li><a href="#">Consectetur Adipisicing </a></li>
-                            <li><a href="#">Ed do eiusmod tempor incididunt</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-lg-4 open-hours">
-                        <div class="footer-title">
-                            <h4>Open hours</h4>
-                            <ul class="footer-social">
-                                <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-    
-                            </ul>
-                        </div>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Monday Thursday</td>
-                                    <td>9:00am - 5:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Friday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Sturday</td>
-                                    <td>9:00am - 1:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Sunday</td>
-                                    <td>9:30am - 12:00pm</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a href="">Privacy policy</a>
-                    </div>
-                    <div class="col-sm-8">
-                        <p>Lorem ipsum dolor sit amet @ 2019 All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

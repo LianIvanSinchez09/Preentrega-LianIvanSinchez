@@ -16,74 +16,49 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="nav-grid-btn">
-                <a class="brand-link" href="#">Los Cuatro Alamos</a>
-                <button class="navbar-toggler ms-auto border-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars fa-fade fa-2x1" style="color: #ffffff;"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto nav-center-btn main-nav-btn">
-                        <li class="nav-item active col">
-                            <a class="nav-link" href="#">Empleados <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="#">Contactos</a>
-                        </li>
-                        <li class="nav-item active col">
-                            <a class="nav-link" href="#">Productos <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="#">Newsletter</a>
-                        </li>
-                    </ul>
-                </div>
+            <a class="brand-link display-4" href="#">Los Cuatro Alamos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-fade fa-2x1" style="color: #ffffff;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav navbar-links">
+                    <li><a class="nav-item link-nav display-6" href="../pages/productos.html">Productos</a></li>
+                    <li><a class="nav-item link-nav display-6" href="../pages/empleados.html">Empleados</a></li>
+                    <li><a class="nav-item link-nav display-6" href="../pages/newsletter.html">Newsletter</a></li>
+                    <li><a class="nav-item link-nav display-6" href="../pages/contacto.html">Contactos</a></li>
+                </ul>
+            </div>
             </div>
         </nav>
     </header>
 <body>
-    <main>
-        <section>
-            <iframe class="contact-map-settings" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24827.250548759952!2d-68.17045322568362!3d-38.93754499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a3335a7826929%3A0x988f06b7378fb7e0!2sBuenos%20Caprichos!5e0!3m2!1ses-419!2sar!4v1686533774392!5m2!1ses-419!2sar" width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section>
-            <div class="info-grid bg-light">
-                <div class="contact-info">
-                    <h3>Info Contactos</h3>
-                    <p><b>Direccion:</b> Lorem ipsum dolor sit amet.</p>
-                    <p><b>Telefono:</b> +366 123 XXXX</p>
-                    <p><b>Email:</b> info@example</p>
-
-                    <div class="flex-icons">
-                        <h3>Nuestras redes</h3>
-                        <div class="d-inline">
-                            <i class="fa-brands fa-xxl fa-square-facebook fa-2xl"></i>
-                            <i class="fa-brands fa-google-plus-g fa-2xl"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="user-form">
-                    <h3>Ponte en contacto con nosotros</h3>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="emailInput">Email</label>
-                                <input type="email" class="form-control" id="emailInput" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="nomcompleto">Nombre Completo</label>
-                                <input type="text" class="form-control" id="user_nombre" placeholder="Inserte nombre del remitente">
+    <main class="bg-danger-subtle">
+        <div class="map-settings">
+            <iframe class="container-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24827.250548759952!2d-68.17045322568362!3d-38.93754499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a3335a7826929%3A0x988f06b7378fb7e0!2sBuenos%20Caprichos!5e0!3m2!1ses-419!2sar!4v1686533774392!5m2!1ses-419!2sar" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <section class="bg-form container-fluid d-flex justify-content-center align-items-center">
+            <div class="flex-form">
+                    <div class="text-start info-box">
+                        <div class="d-flex flex-column">
+                            <h3 class="display-3">Info Contactos</h3>
+                            <p class="text-white"><b>Telefono:</b> +366 123 XXXX</p>
+                            <p class="text-white"><b>Email:</b> liansinchez00@gmail.com</p>
+                            <h3 class="display-3">Nuestras redes</h3>
+                            <div class="d-flex flex-icons">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <ion-icon name="logo-instagram"></ion-icon>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <form class="me-xl-5 d-flex flex-column w-100">
+                            <label for="emailInput">Email</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                            <label for="nomcompleto">Nombre Completo</label>
+                            <input type="text" class="form-control" id="user_nombre" placeholder="Inserte nombre del remitente">
                             <label for="direccionInput">Direccion</label>
                             <input type="text" class="form-control" id="direccionInput" placeholder="1234 Manuel Belgrano...">
-                        </div>
-                        <div class="form-group msg-settings">
                             <label for="msg_usuario_input">Mensaje</label>
                             <input type="text" class="form-control" id="user_mensaje" placeholder="Inserte mensaje">
-                        </div>
-                        <div class="form-row">
-                            <div>
+                            <div class="form-row">
                                 <label for="provinciaInput">Provincia</label>
                                 <select id="provinciaInput" class="form-control select-provincia">
                                     <option selected>Elegir</option>
@@ -113,98 +88,32 @@
                                     <option value="tucuman">Tucumán</option>
                                 </select>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-3">Sign in</button>
-                    </form>
+                            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
         </section>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 about-footer">
-                        <h3>Lorem Ipsum dummy text </h3>
-                        <ul>
-                            <li><a href="tel:(010) 1234 4321"><i class="fas fa-phone fa-flip-horizontal"></i>(010) 1234 4321</a></li>
-                            <li><i class="fas fa-map-marker-alt"></i>
-                                1 / 105 Bay Lights,
-                                <br/>Lorem Ipsum,
-                                <br/>LIC 3201
-                            </li>
-                        </ul>
-                        <a href="" class="btn red-btn">Book Now</a>
-                    </div>
-                    <div class="col-md-6 col-lg-2 page-more-info">
-                        <div class="footer-title">
-                            <h4>Page links</h4>
-                        </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="col-md-6 col-lg-3 page-more-info">
-                        <div class="footer-title">
-                            <h4>More Info</h4>
-                        </div>
-                        <ul>
-                            <li><a href="#">Lorem ipsum</a></li>
-                            <li><a href="#">Dolor sit amet</a></li>
-                            <li><a href="#">Consectetur Adipisicing </a></li>
-                            <li><a href="#">Ed do eiusmod tempor incididunt</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-lg-4 open-hours">
-                        <div class="footer-title">
-                            <h4>Open hours</h4>
-                            <ul class="footer-social">
-                                <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-    
-                            </ul>
-                        </div>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Monday Thursday</td>
-                                    <td>9:00am - 5:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Friday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Sturday</td>
-                                    <td>9:00am - 1:30pm</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="far fa-clock"></i>Sunday</td>
-                                    <td>9:30am - 12:00pm</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <footer class="footer text-white">
+            <div class="container-fluid">
+              <div class="footer-line row">
+                <div class="col-md-6">
+                  <h5 class="display-5">Contacto</h5>
+                  <p class="fs-4">Teléfono: +366 123 XXXX</p>
+                  <p class="fs-4">Email: liansinchez00@gmail.com</p>
                 </div>
-            </div>
-            <hr>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a href="">Privacy policy</a>
-                    </div>
-                    <div class="col-sm-8">
-                        <p>Lorem ipsum dolor sit amet @ 2019 All rights reserved</p>
-                    </div>
+                <div class="col-md-6">
+                  <h5 class="display-5">Enlaces</h5>
+                  <ul class="list-unstyled">
+                    <li><a class="nav-item link-nav" href="../pages/productos.html">Productos</a></li>
+                    <li><a class="nav-item link-nav" href="../pages/empleados.html">Empleados</a></li>
+                    <li><a class="nav-item link-nav" href="../pages/newsletter.html">Newsletter</a></li>
+                    <li><a class="nav-item link-nav" href="../pages/contacto.html">Contactos</a></li>
+                  </ul>
                 </div>
+              </div>
+              <p class="text-center fs-3">© 2023 Lian Ivan Sinchez</p>
             </div>
-        </div>
-    </footer>
+          </footer>
 </body>
 </html>
+
