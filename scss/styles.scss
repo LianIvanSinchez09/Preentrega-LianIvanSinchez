@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap');
 
 // MIXINS
 @mixin userCard(){
+  display: grid;
+  place-items: center;
   background-color: white;
   border-radius: 15px;
   padding: 15px;
+  width: auto;
   img{
-    margin-left: 8px;
     border: #fff 2px solid;
     border-radius: 10px;
   }
@@ -18,6 +20,12 @@
   p{
     font-family: "Bebas Neue", sans-serif;
     font-size: 30px;
+  }
+}
+@mixin hoverAnimation{
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.2);
   }
 }
 @mixin productCard(){
@@ -78,13 +86,6 @@ ul {
 form {
   font-size: 1.5rem;
 }
-// input::placeholder {
-//   font-size: 1.2rem;
-// }
-
-// input[type=text] {
-//   font-size: 14px;
-// }
 /* NAVBAR */
 header{
   width: 100%;
@@ -106,7 +107,7 @@ nav{
 }
 /* MAIN */
 .bg-intro {
-  background-image: url(../imgs/animate-cover-3.jpeg);
+  background-image: url(../imgs/bg-intro.jpeg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -160,7 +161,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../imgs/assets/empleados/cover.jpg);
+  background: url(../imgs/bg-empleados.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   h1{
@@ -168,8 +169,8 @@ nav{
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
   }
 }
 .miembros-section{
@@ -184,6 +185,17 @@ nav{
   justify-content: center;
   align-items: center;
   gap: 20rem;
+}
+.employee-section{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  gap: 5%;
+  margin-bottom: 5rem;
+}
+.hover-animation{
+  @include hoverAnimation()
 }
 .usercard{
   @include userCard()
@@ -200,6 +212,12 @@ nav{
   min-height: 50vh;
   width: 100%;
 }
+.form-control{
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
 .map-settings {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   min-width: 100vw;
@@ -214,10 +232,14 @@ nav{
   padding-bottom: 3rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
-  backdrop-filter: blur(13.2px);
-  box-shadow: 26px 18px 14px 12px rgba(153,92,92,0.65);
-  -webkit-box-shadow: 26px 18px 14px 12px rgba(153,92,92,0.65);
-  -moz-box-shadow: 26px 18px 14px 12px rgba(153,92,92,0.65);
+  h3{
+    color: black;
+    font-size: $fontsizetitulos - 30px;
+  }
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .info-box{
   display: flex;
@@ -234,97 +256,36 @@ nav{
   gap: 20px;
   font-size: $fontsizeparrafos;
 }
-/* PRODUCTOS */
-.tienda-productos-box {
-  background: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  padding-bottom: 15rem;
-  background-repeat: no-repeat;
-  background-size: cover;
+// NEWSLETTER
+.newsletter-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  h3, p, label{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+  }
+  input{
+    max-width: 50%;
+  }
 }
-
-.portada-tienda img {
-  width: 170rem;
-  height: 50rem;
-  padding: 5rem;
+.bg-newsletter{
+  background-color: rgb(26, 23, 23);
+  min-height: 50vh;
+  width: 100%;
 }
-
-.items-tienda {
-  padding: 5rem;
-}
-
-.items-tienda img {
-  width: 30rem;
-  height: 15rem;
-  margin-left: 8rem;
-}
-
-.tienda-productos-box {
-  background: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  padding-bottom: 15rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.newsletter-wrapper {
-  background: url(../imgs/newsletter-cover.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 13rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-bottom: 15rem;
-}
-
-.newsletter-box {
-  border: 1px solid black;
+.button-newsletter{
+  display: flex;
+  align-items: center;
+  width: 100px;
   border-radius: 15px;
-  padding: 12px;
-  padding-bottom: 20rem;
+  background-color: blueviolet;
 }
 
-.newsletter-box label input {
-  width: 50rem;
-  display: block;
-  margin-left: 50rem;
-}
-
-.newsletter-box label {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.newsletter-box input {
-  height: 2.5rem;
-}
-
-.newsletter-form {
-  padding-top: 10rem;
-}
-
-.empleado-galeria {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-  background: url(https://i.pinimg.com/originals/e4/1e/b7/e41eb750682725518534bee5d75574af.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.empleado-galeria div {
-  display: inline;
-}
-
-.empleado-box a {
-  margin-left: 15rem;
-}
-
-.empleado-box img {
-  border-radius: 15px;
-}
-
-.custom-bg-contacts {
-  background: url(../imgs/bg-for-map.jpg);
-  background-size: cover;
-}
 // FOOTER
 .footer-line{
   border-bottom: 1px solid white;
@@ -346,6 +307,11 @@ footer{
   .admins-section{
     flex-direction: column;
     gap: 30px;
+  }
+  .employee-section{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
 }
 @media screen and (max-width:375px) {
