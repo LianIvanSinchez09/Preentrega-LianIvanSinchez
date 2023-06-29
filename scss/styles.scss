@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap');
+// EXTENDS
+
+.centerflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // MIXINS
 @mixin userCard(){
@@ -28,15 +35,16 @@
     transform: scale(1.2);
   }
 }
-@mixin productCard(){
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px;
-}
 // VARIABLES
 $fontsizetitulos: 100px;
 $fontsizeparrafos: calc($fontsizetitulos/2);
 
+// GENERAL
+.content-wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 * {
   margin: 0;
   padding: 0;
@@ -57,28 +65,20 @@ a, a:active, a:focus {
   color: lightgrey;
   font-family: "Bebas Neue", sans-serif;
 }
-html {
-  overflow-x: hidden;
-  height: 100%;
-}
-
 main {
   background-color: white;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
-
 html, body {
   height: 100%;
-  min-width: 100%;
   overflow-x: hidden;
-}
-
-body {
   margin: 0;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+}
+body {
+  position: relative;
 }
 ul {
   list-style: none;
@@ -112,9 +112,7 @@ nav{
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .centerflex
 }
 .bg-intro-content {
   text-align: center;
@@ -138,15 +136,11 @@ nav{
   border-radius: 4px;
 }
 .title-cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @extend .centerflex
 }
 .intro-p{
-  display: flex;
+  @extend .centerflex;
   gap: 30%;
-  justify-content: center;
-  align-items: center;
 }
 .container-intro {
   background: rgb(0,0,0);
@@ -158,9 +152,7 @@ nav{
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .centerflex;
   background: url(../imgs/bg-empleados.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -181,9 +173,7 @@ nav{
   }
 }
 .admins-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .centerflex;
   gap: 20rem;
 }
 .employee-section{
@@ -208,8 +198,6 @@ nav{
 .bg-form{
   background: url(../imgs/background-form.jpg);
   background-size: cover;
-  background-position: center;
-  min-height: 50vh;
   width: 100%;
 }
 .form-control{
@@ -223,9 +211,7 @@ nav{
   min-width: 100vw;
 }
 .flex-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .centerflex;
   padding-top: 3rem;
   padding-left: 20rem;
   padding-right: 20rem;
@@ -275,7 +261,6 @@ nav{
 }
 .bg-newsletter{
   background-color: rgb(26, 23, 23);
-  min-height: 50vh;
   width: 100%;
 }
 .button-newsletter{
@@ -285,13 +270,50 @@ nav{
   border-radius: 15px;
   background-color: blueviolet;
 }
+// PRODUCTOS
+@mixin filaGrid(){
+  display: grid;
+  place-items: center;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.productos-gallery{
+  padding-top: 5rem;
+  @include filaGrid()
+}
+.product-card{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border: 2px solid black;
+  img{
+    border: 1px solid black;
+    padding: 2rem;
+  }
+  p{
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    font-size: $fontsizeparrafos - 20px;
+  }
+  span{
+    font-size: $fontsizeparrafos - 30px;
+    color: white;
+  }
+  @include hoverAnimation()
+}
+.bg-products{
+  background: url(../imgs/bg-products.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
 // FOOTER
 .footer-line{
   border-bottom: 1px solid white;
 }
 footer{
-  min-height: 50vh;
+  min-height: 40%;
+  margin-top: auto;
   background: rgb(0,0,0);
   background: linear-gradient(52deg, rgba(0,0,0,1) 0%, rgba(67,6,6,1) 63%, rgba(161,15,15,1) 100%, rgba(0,0,0,1) 100%);
   a{
@@ -317,6 +339,11 @@ footer{
 @media screen and (max-width:375px) {
   .bg-intro-content{
     margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 790px) {
+footer{
+  min-height: 80%;
   }
 }
 @media screen and (max-width: 1024px) {

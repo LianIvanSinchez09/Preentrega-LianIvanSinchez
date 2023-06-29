@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap");
+.centerflex, .flex-form, .admins-section, .empleados-cover, .intro-p, .title-cover, .bg-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,28 +33,22 @@ a, a:active, a:focus {
   font-family: "Bebas Neue", sans-serif;
 }
 
-html {
-  overflow-x: hidden;
-  height: 100%;
-}
-
 main {
   background-color: white;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 html, body {
   height: 100%;
-  min-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 ul {
@@ -83,9 +89,6 @@ nav {
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .bg-intro-content {
@@ -111,17 +114,8 @@ nav {
   border-radius: 4px;
 }
 
-.title-cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .intro-p {
-  display: flex;
   gap: 30%;
-  justify-content: center;
-  align-items: center;
 }
 
 .container-intro {
@@ -134,9 +128,6 @@ nav {
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: url(../imgs/bg-empleados.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,9 +150,6 @@ nav {
 }
 
 .admins-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 20rem;
 }
 
@@ -212,8 +200,6 @@ nav {
 .bg-form {
   background: url(../imgs/background-form.jpg);
   background-size: cover;
-  background-position: center;
-  min-height: 50vh;
   width: 100%;
 }
 
@@ -230,9 +216,6 @@ nav {
 }
 
 .flex-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 3rem;
   padding-left: 20rem;
   padding-right: 20rem;
@@ -286,7 +269,6 @@ nav {
 
 .bg-newsletter {
   background-color: rgb(26, 23, 23);
-  min-height: 50vh;
   width: 100%;
 }
 
@@ -298,12 +280,51 @@ nav {
   background-color: blueviolet;
 }
 
+.productos-gallery {
+  padding-top: 5rem;
+  display: grid;
+  place-items: center;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.product-card {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border: 2px solid black;
+  transition: transform 0.3s ease;
+}
+.product-card img {
+  border: 1px solid black;
+  padding: 2rem;
+}
+.product-card p {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 30px;
+}
+.product-card span {
+  font-size: 20px;
+  color: white;
+}
+.product-card:hover {
+  transform: scale(1.2);
+}
+
+.bg-products {
+  background: url(../imgs/bg-products.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .footer-line {
   border-bottom: 1px solid white;
 }
 
 footer {
-  min-height: 50vh;
+  min-height: 40%;
+  margin-top: auto;
   background: rgb(0, 0, 0);
   background: linear-gradient(52deg, rgb(0, 0, 0) 0%, rgb(67, 6, 6) 63%, rgb(161, 15, 15) 100%, rgb(0, 0, 0) 100%);
 }
@@ -329,6 +350,11 @@ footer p {
 @media screen and (max-width: 375px) {
   .bg-intro-content {
     margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 790px) {
+  footer {
+    min-height: 80%;
   }
 }
 @media screen and (max-width: 1024px) {
