@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap');
-// EXTENDS
 
+// EXTENDS
 .centerflex{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.filter-bg-dark{
+  width: 100%;
+  background-color: rgba(0,0,0, 0.4);
+  padding: 2rem;
+}
+.y-transition{
+  animation: 1.2s ease transicionEnY;
+}
+.opacity-0-100{
+  animation: 2.5s ease opacity0to1;
+}
+.x-transicion{
+  animation: 1.90s ease-in-out transicionEnX;
+}
 // MIXINS
 @mixin userCard(){
   display: grid;
@@ -32,7 +45,7 @@
 @mixin hoverAnimation{
   transition: transform 0.3s ease;
   &:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 }
 // VARIABLES
@@ -91,6 +104,7 @@ header{
   width: 100%;
   position: fixed;
   z-index: 999;
+  @extend .y-transition
 }
 nav{
   position: fixed;
@@ -103,7 +117,7 @@ nav{
   gap: 10%;
 }
 .brand-link{
-  width: 35%;
+  margin-right: 30rem;
 }
 /* MAIN */
 .bg-intro {
@@ -115,6 +129,7 @@ nav{
   @extend .centerflex
 }
 .bg-intro-content {
+  @extend .opacity-0-100;
   text-align: center;
   color: #ffffff;
   h1 {
@@ -157,12 +172,11 @@ nav{
   background-repeat: no-repeat;
   background-size: cover;
   h1{
+    @extend .x-transicion;
     font-size: $fontsizetitulos;
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.4);
   }
 }
 .miembros-section{
@@ -203,7 +217,7 @@ nav{
 .form-control{
   transition: transform 0.3s ease;
   &:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 }
 .map-settings {
@@ -231,7 +245,6 @@ nav{
   display: flex;
   justify-content: center;
   gap: 15%;
-  width: 100%;
 }
 .contact-info {
   display: grid;
@@ -244,31 +257,32 @@ nav{
 }
 // NEWSLETTER
 .newsletter-box{
+  background: url(https://www.bodegasdomecq.com/sites/default/files/2022-01/D-newsletter-header_1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  h3, p, label{
+  h3, p, label, input, button{
     font-family: 'Oswald', sans-serif;
     color: white;
+  }
+  h3{
+    font-size: $fontsizetitulos - 40px;
+  }
+  p{
+    font-size: $fontsizeparrafos - 20px;
   }
   input{
     max-width: 50%;
   }
 }
-.bg-newsletter{
-  background-color: rgb(26, 23, 23);
-  width: 100%;
-}
 .button-newsletter{
-  display: flex;
-  align-items: center;
-  width: 100px;
   border-radius: 15px;
   background-color: blueviolet;
+  width: min-content;
 }
 // PRODUCTOS
 @mixin filaGrid(){
@@ -324,7 +338,35 @@ footer{
     font-family: "Bebas Neue", sans-serif;
   }
 }
-
+// KEYFRAMES
+@keyframes transicionEnY{
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity0to1{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes transicionEnX {
+  0%{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 1109px) {
   .admins-section{
@@ -354,7 +396,7 @@ footer{
       justify-content: center;
     }
 }
-@media screen and (max-width: 1084px) {
+@media screen and (max-width: 1461px) {
   .info-box{
     flex-direction: column;
     width: 350px;

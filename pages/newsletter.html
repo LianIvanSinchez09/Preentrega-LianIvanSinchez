@@ -6,7 +6,7 @@
         <meta name="keywords" content="pan, panadería, panaderiaargentina, panaderos"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Newsletter | Cuatro Alamos</title>
-        <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -31,19 +31,17 @@
             </div>
         </nav>
     </header>
-    <main class="bg-newsletter">
-        <section class="d-flex justify-content-center align-items-center">
-            <div class="container-fluid">
-                <div class="container-fluid newsletter-box p-5">
-                    <h3>Suscribite hoy a nuestro Newsletter</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci vel rem repellat eveniet! Voluptatibus ab quia obcaecati omnis ex! Officia in minus, voluptate quisquam, consectetur modi quaerat, est perferendis ad nam eveniet ex saepe voluptatibus iure totam delectus qui nulla maxime harum neque. Doloribus officiis facilis deleniti perferendis modi.</p>
-                    <form class="d-flex flex-column" action="">
-                        <label class="mb-3" for="">Email</label>
-                        <input placeholder="Tu email acá" type="text">
-                        <button class="button-newsletter mt-3" type="submit">Suscribirme</button>
-                    </form>
-                </div>
-            </div>
+    <main class="bg-newsletter content-wrap d-flex justify-content-center align-items-center">
+        <section class="newsletter-box">
+          <div class="filter-bg-dark">
+            <h3>Suscribite hoy a nuestro Newsletter</h3>
+            <p>Estamos encantados de traerte las últimas noticias y promociones de nuestros productos recién horneados. En este mes veraniego, hemos preparado una selección de deliciosos panes artesanales, pasteles irresistibles y bocadillos llenos de sabor.</p>
+            <form class="d-flex flex-column" action="">
+              <label for="emailInput">Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Tu email acá">
+                <button class="btn btn-primary button-newsletter mt-3" type="submit">Suscribirme</button>
+            </form>
+          </div>
         </section>
     </main>
     <footer class="footer text-white">

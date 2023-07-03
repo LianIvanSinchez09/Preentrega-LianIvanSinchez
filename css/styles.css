@@ -5,6 +5,24 @@
   align-items: center;
 }
 
+.filter-bg-dark {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+}
+
+.y-transition, header {
+  animation: 1.2s ease transicionEnY;
+}
+
+.opacity-0-100, .bg-intro-content {
+  animation: 2.5s ease opacity0to1;
+}
+
+.x-transicion, .empleados-cover h1 {
+  animation: 1.9s ease-in-out transicionEnX;
+}
+
 .content-wrap {
   min-height: 100%;
   display: flex;
@@ -79,7 +97,7 @@ nav {
 }
 
 .brand-link {
-  width: 35%;
+  margin-right: 30rem;
 }
 
 /* MAIN */
@@ -137,8 +155,6 @@ nav {
   color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .miembros-section {
@@ -166,7 +182,7 @@ nav {
   transition: transform 0.3s ease;
 }
 .hover-animation:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .usercard {
@@ -207,7 +223,7 @@ nav {
   transition: transform 0.3s ease;
 }
 .form-control:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .map-settings {
@@ -236,7 +252,6 @@ nav {
   display: flex;
   justify-content: center;
   gap: 15%;
-  width: 100%;
 }
 
 .contact-info {
@@ -251,33 +266,33 @@ nav {
 }
 
 .newsletter-box {
+  background: url(https://www.bodegasdomecq.com/sites/default/files/2022-01/D-newsletter-header_1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
 }
-.newsletter-box h3, .newsletter-box p, .newsletter-box label {
+.newsletter-box h3, .newsletter-box p, .newsletter-box label, .newsletter-box input, .newsletter-box button {
   font-family: "Oswald", sans-serif;
   color: white;
+}
+.newsletter-box h3 {
+  font-size: 60px;
+}
+.newsletter-box p {
+  font-size: 30px;
 }
 .newsletter-box input {
   max-width: 50%;
 }
 
-.bg-newsletter {
-  background-color: rgb(26, 23, 23);
-  width: 100%;
-}
-
 .button-newsletter {
-  display: flex;
-  align-items: center;
-  width: 100px;
   border-radius: 15px;
   background-color: blueviolet;
+  width: min-content;
 }
 
 .productos-gallery {
@@ -309,7 +324,7 @@ nav {
   color: white;
 }
 .product-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .bg-products {
@@ -336,6 +351,34 @@ footer p {
   font-family: "Bebas Neue", sans-serif;
 }
 
+@keyframes transicionEnY {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity0to1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transicionEnX {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 1109px) {
   .admins-section {
@@ -365,7 +408,7 @@ footer p {
     justify-content: center;
   }
 }
-@media screen and (max-width: 1084px) {
+@media screen and (max-width: 1461px) {
   .info-box {
     flex-direction: column;
     width: 350px;
