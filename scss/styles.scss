@@ -104,7 +104,7 @@ header{
   width: 100%;
   position: fixed;
   z-index: 999;
-  @extend .y-transition
+  @extend .y-transition;
 }
 nav{
   position: fixed;
@@ -112,12 +112,13 @@ nav{
   background: rgb(102, 4, 4);
   background: linear-gradient(90deg, rgb(102, 4, 4) 8%, rgb(0, 0, 0) 85%, rgb(93, 2, 2) 100%);
 }
+.navbar-main{
+  display: flex;
+  gap: 5rem;
+}
 .navbar-links{
   display: flex;
-  gap: 10%;
-}
-.brand-link{
-  margin-right: 30rem;
+  gap: 5%;
 }
 /* MAIN */
 .bg-intro {
@@ -359,7 +360,7 @@ footer{
 }
 @keyframes transicionEnX {
   0%{
-    transform: translateX(-50%);
+    transform: translateX(50%);
     opacity: 0;
   }
   100%{
@@ -387,6 +388,13 @@ footer{
 @media screen and (max-width: 790px) {
 footer{
   min-height: 80%;
+  }
+}
+@media screen and (max-width:553px) {
+  .newsletter-box{
+    h3{
+      margin-top: 10rem;
+    } 
   }
 }
 @media screen and (max-width: 1024px) {
@@ -422,5 +430,13 @@ footer{
 @media (max-width: 354px){
   .nav-column{
     display: flex;
+  }
+}
+@media screen and (max-width:991px) {
+  .navbar-main{
+    display: block;
+  }
+  .navbar-links{
+    display: block;
   }
 }

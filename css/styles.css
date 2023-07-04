@@ -91,13 +91,14 @@ nav {
   background: linear-gradient(90deg, rgb(102, 4, 4) 8%, rgb(0, 0, 0) 85%, rgb(93, 2, 2) 100%);
 }
 
-.navbar-links {
+.navbar-main {
   display: flex;
-  gap: 10%;
+  gap: 5rem;
 }
 
-.brand-link {
-  margin-right: 30rem;
+.navbar-links {
+  display: flex;
+  gap: 5%;
 }
 
 /* MAIN */
@@ -371,7 +372,7 @@ footer p {
 }
 @keyframes transicionEnX {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(50%);
     opacity: 0;
   }
   100% {
@@ -399,6 +400,11 @@ footer p {
 @media screen and (max-width: 790px) {
   footer {
     min-height: 80%;
+  }
+}
+@media screen and (max-width: 553px) {
+  .newsletter-box h3 {
+    margin-top: 10rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -432,6 +438,14 @@ footer p {
 @media (max-width: 354px) {
   .nav-column {
     display: flex;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar-main {
+    display: block;
+  }
+  .navbar-links {
+    display: block;
   }
 }
 
