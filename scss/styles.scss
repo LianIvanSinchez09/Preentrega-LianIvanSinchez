@@ -1,71 +1,7 @@
+@import 'variables';
+@import 'extends';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap');
-
-// EXTENDS
-.centerflex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.filter-bg-dark{
-  width: 100%;
-  background-color: rgba(0,0,0, 0.4);
-  padding: 2rem;
-}
-.y-transition{
-  animation: 1.2s ease transitionY;
-}
-.opacity-0-100{
-  animation: 2.5s ease opacity0to1;
-}
-.x-transition{
-  animation: 1.90s ease-in-out transitionX;
-}
-.x-transitionNegative{
-  animation: 1.90s ease-in-out transitionXNegative;
-}
-.colorMain{
-  background: rgb(102, 4, 4);
-  background: linear-gradient(90deg, rgb(102, 4, 4) 8%, rgb(0, 0, 0) 85%, rgb(93, 2, 2) 100%);
-}
-// MIXINS
-@mixin userCard(){
-  display: grid;
-  place-items: center;
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px;
-  width: auto;
-  img{
-    border: #fff 2px solid;
-    border-radius: 10px;
-  }
-  h5{
-    font-size: 50px;
-    color: black;
-    margin: 0;
-  }
-  p{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 30px;
-  }
-}
-@mixin hoverAnimation{
-  transition: transform 0.3s ease;
-  &:hover{
-    transform: scale(1.05);
-  }
-}
-@mixin filaGrid(){
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.1fr));
-  grid-gap: 1.2rem;
-  justify-content:center;
-}
-// VARIABLES
-$fontsizetitulos: 100px;
-$fontsizeparrafos: calc($fontsizetitulos/2);
-$mainFontFamily: "Bebas Neue", sans-serif;
-// GENERAL
 .content-wrap {
   min-height: 100%;
   display: flex;
@@ -141,14 +77,16 @@ nav{
   background-position: center;
   min-height: 100vh;
   width: 100%;
-  @extend .centerflex
+  @extend .centerflex;
+  h1{
+    font-size: $fontsizeparrafos + 30px;
+  }
 }
 .bg-intro-content {
   @extend .opacity-0-100;
   text-align: center;
   color: #ffffff;
   h1 {
-    font-size: $fontsizetitulos;
     margin-bottom: 1rem;
   }
   p {
@@ -167,6 +105,22 @@ nav{
   padding: 13px 23px;
   border: 1px solid #222222;
   @extend .colorMain;
+}
+.secondary-btn{
+  border: 0;
+  border-radius: 15px;
+  outline: 5px solid;
+  outline-offset: -10px;
+  transition: 500ms;
+  background-color: rgb(102, 4, 4);
+  padding: .5em 1em;
+  cursor: pointer;
+
+  &:hover,
+  &focus {
+    background-color: black;
+    outline-offset: 2px;
+  }
 }
 .title-cover {
   @extend .centerflex;
@@ -298,57 +252,36 @@ nav{
   font-size: $fontsizeparrafos;
 }
 // NEWSLETTER
+.newsletter-menu{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 5%;
+  @extend .centerflex;
+  flex-direction: column;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
 .cover-newsletter{
   @extend .centerflex;
   background: url(../imgs/newsletter-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-width: 100vw;
-  padding: 10rem;
-  h1{
-    font-size: $fontsizetitulos;
-    @extend .opacity-0-100;
-  }
-}
-.newsletter-input{
-  border: 1px solid black;
-  p{
-    font-family: "Bebas Neue", sans-serif;
-  }
-  label{
-    border-right: 1px solid black;
-  }
-  input{
-    border: none;
-    outline: none;
-    &:focus{
-      outline: none;
-    }
-  }
-}
-.newsletter-box{
-  @extend .centerflex;
-}
-.newsletter-custom{
-  border-radius: 104px 104px 0px 10px;
-  -webkit-border-radius: 104px 104px 0px 10px;
-  -moz-border-radius: 104px 104px 0px 10px;
-}
-.newsletter-menu{
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
-  border-radius: 15px;
-  padding: 2rem;
-  img{
-    width: 100%;
-    height: 100%
-  }
+  width: 100%;
+  min-height: 100vh;
   @extend .opacity-0-100;
+  h1{
+    font-size: calc($fontsizetitulos - 30px);
+  }
 }
 // PRODUCTOS
 .cover-products{
@@ -488,6 +421,11 @@ footer{
       font-size: $fontsizetitulos - 20px;
     }
   }
+  .cover-products{
+    h1{
+      font-size: $fontsizetitulos - 20px;
+    }
+  }
 }
 @media screen and (max-width: 375px) {
   .filter-bg{
@@ -529,14 +467,7 @@ footer{
   }
 }
 }
-@media screen and (max-width:553px) {
-  .newsletter-box{
-    h3{
-      margin-top: 10rem;
-    } 
-  }
 
-}
 @media screen and (max-width: 1024px) {
     .intro-style{
       display: flex;
@@ -579,5 +510,6 @@ footer{
   .newsletter-menu{
     display: flex;
     flex-direction: column;
+
   }
 }

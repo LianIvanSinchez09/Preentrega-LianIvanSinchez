@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap");
-.centerflex, .cover-products, .newsletter-box, .cover-newsletter, .form-styling, .admins-section, .empleados-cover, .intro-p, .title-cover, .bg-intro {
+.centerflex, .cover-products, .cover-newsletter, .newsletter-menu, .form-styling, .admins-section, .empleados-cover, .intro-p, .title-cover, .bg-intro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
   animation: 1.2s ease transitionY;
 }
 
-.opacity-0-100, .newsletter-menu, .cover-newsletter h1, .bg-intro-content {
+.opacity-0-100, .cover-newsletter, .bg-intro-content {
   animation: 2.5s ease opacity0to1;
 }
 
@@ -119,13 +119,15 @@ nav {
   min-height: 100vh;
   width: 100%;
 }
+.bg-intro h1 {
+  font-size: 80px;
+}
 
 .bg-intro-content {
   text-align: center;
   color: #ffffff;
 }
 .bg-intro-content h1 {
-  font-size: 100px;
   margin-bottom: 1rem;
 }
 .bg-intro-content p {
@@ -143,6 +145,21 @@ nav {
   border-radius: 8px;
   padding: 13px 23px;
   border: 1px solid #222222;
+}
+
+.secondary-btn {
+  border: 0;
+  border-radius: 15px;
+  outline: 5px solid;
+  outline-offset: -10px;
+  transition: 500ms;
+  background-color: rgb(102, 4, 4);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.secondary-btn:hover, .secondary-btnfocus {
+  background-color: black;
+  outline-offset: 2px;
 }
 
 .title-cover {
@@ -303,54 +320,34 @@ nav {
   font-size: 50px;
 }
 
+.newsletter-menu {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.48);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 5%;
+  flex-direction: column;
+}
+.newsletter-menu h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.newsletter-menu p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 .cover-newsletter {
   background: url(../imgs/newsletter-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-width: 100vw;
-  padding: 10rem;
+  width: 100%;
+  min-height: 100vh;
 }
 .cover-newsletter h1 {
-  font-size: 100px;
-}
-
-.newsletter-input {
-  border: 1px solid black;
-}
-.newsletter-input p {
-  font-family: "Bebas Neue", sans-serif;
-}
-.newsletter-input label {
-  border-right: 1px solid black;
-}
-.newsletter-input input {
-  border: none;
-  outline: none;
-}
-.newsletter-input input:focus {
-  outline: none;
-}
-
-.newsletter-custom {
-  border-radius: 104px 104px 0px 10px;
-  -webkit-border-radius: 104px 104px 0px 10px;
-  -moz-border-radius: 104px 104px 0px 10px;
-}
-
-.newsletter-menu {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
-  border-radius: 15px;
-  padding: 2rem;
-}
-.newsletter-menu img {
-  width: 100%;
-  height: 100%;
+  font-size: 70px;
 }
 
 .cover-products {
@@ -496,6 +493,9 @@ footer p {
   .cover-newsletter h1 {
     font-size: 80px;
   }
+  .cover-products h1 {
+    font-size: 80px;
+  }
 }
 @media screen and (max-width: 375px) {
   .filter-bg h1 {
@@ -533,11 +533,6 @@ footer p {
   }
   .contacts-flex iframe {
     margin-bottom: 5rem;
-  }
-}
-@media screen and (max-width: 553px) {
-  .newsletter-box h3 {
-    margin-top: 10rem;
   }
 }
 @media screen and (max-width: 1024px) {
