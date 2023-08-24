@@ -1,7 +1,7 @@
 // algoritmo que aplica descuentos random a las tarjetas de productos
 
-//obtengo los elementos con la clase text dark y display 6
-const elementoDescuento = document.querySelectorAll(".h6");
+//obtengo los elementos con la id tarjetaJs
+const elementoDescuento = document.querySelectorAll("#tarjetaJs");
 
 //iteramos por cada elemento y le aplicamos el descuento
 elementoDescuento.forEach(element => {
