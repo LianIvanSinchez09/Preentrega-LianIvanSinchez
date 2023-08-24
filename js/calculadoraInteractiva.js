@@ -79,3 +79,5 @@ if (userChoice === 'calculadora') {
 } else if (userChoice === 'impresora') {
     imprimirNumeros();
 }
+
+calculator();
