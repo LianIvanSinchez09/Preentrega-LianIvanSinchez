@@ -8,13 +8,6 @@ const footerLinks = [
     {text: "Contacto", url: "../pages/contacto.html"},
     {text: "Newsletter", url: "../pages/newsletter.html"}
 ]
-const footerLinksIndex = [
-    {text: "Productos", url: "/pages/productos.html"},
-    {text: "Empleados", url: "/pages/empleados.html"},
-    {text: "Contacto", url: "/pages/contacto.html"},
-    {text: "Newsletter", url: "/pages/newsletter.html"}
-]
-
 //seleccionamos el elemento con la clase .list unstyled
 const listaFooter = document.querySelector(".list-unstyled");
 
