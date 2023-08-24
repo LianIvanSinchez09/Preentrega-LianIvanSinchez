@@ -25,16 +25,3 @@ const footerLinksHTML = footerLinks.map(link => `
 
 // se convierte el array en un string con la funcion .join()
 listaFooter.innerHTML = footerLinksHTML.join('');
-
-/*                                      */
-
-//seleccionamos el elemento con la clase .list unstyled
-const listaFooterIndex = document.querySelector(".list-unstyled");
-
-// les asignamos un nodo + estilos con la funcion map
-const footerLinksIndexHTML = footerLinksIndex.map(linkIndex => `
-    <li><a class="nav-item link-nav" href="${linkIndex.url}">${linkIndex.text}</a></li>
-    `);
-
-// se convierte el array en un string con la funcion .join()
-listaFooterIndex.innerHTML = footerLinksIndexHTML.join('');
