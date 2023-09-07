@@ -45,8 +45,6 @@ function showProducts(){
 
 showProducts();
 
-
-
 let carrito = [];
 
 function actualizarCarro() {
@@ -89,7 +87,6 @@ function borrarItems(index){
   carrito.splice(index, 1);
   actualizarCarro();
 }
-
 window.onload = function (){
   const carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
   if(carritoGuardado){
