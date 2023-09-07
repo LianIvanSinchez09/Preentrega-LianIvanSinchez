@@ -9,10 +9,10 @@ function constructoraTarjetas(id, nombre, descripcion, precio, imagen){
 
 // instancias de productos
 const productos = [
-    new constructoraTarjetas (1, "Mix Regional", "Pastafrola, medialunas y más (1 docena)", 350, "../imgs/products-pngs/product-1.png"),
-    new  constructoraTarjetas (2, "Cheesecake Festivo", "Cheesecake de frutilla y chocolate (1)", 550, "../imgs/products-pngs/product-2.png"),
-    new  constructoraTarjetas (3, "Cheesecake Tradicional", "Cheesecake con frutilla y pasta de maní (1)", 150, "../imgs/products-pngs/product-3.png"),
-    new  constructoraTarjetas (4, "Arte en cupcake", "Cupcake de crema con chispas de chocolate y frutilla en la cima (1)", 300, "../imgs/products-pngs/product-4.png"),
+    new constructoraTarjetas (1, "Mix Regional", "Pastafrola, medialunas y más (1 docena)", 350, "imgs/products-pngs/product-1.png"),
+    new  constructoraTarjetas (2, "Cheesecake Festivo", "Cheesecake de frutilla y chocolate (1)", 550, "imgs/products-pngs/product-2.png"),
+    new  constructoraTarjetas (3, "Cheesecake Tradicional", "Cheesecake con frutilla y pasta de maní (1)", 150, "imgs/products-pngs/product-3.png"),
+    new  constructoraTarjetas (4, "Arte en cupcake", "Cupcake de crema con chispas de chocolate y frutilla en la cima (1)", 300, "imgs/products-pngs/product-4.png"),
 ];
 
 // Mostrar los productos en las tarjetas
