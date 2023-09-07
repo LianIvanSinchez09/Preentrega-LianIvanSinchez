@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Gael Huertas",
+        "cargo": "Lider de Marketing",
+        "perfilPic": "../imgs/founder1.jpg"
+    },
+    {
+        "nombre": "Julián Martos",
+        "cargo": "Communinty Manager",
+        "perfilPic": "../imgs/founder2.jpg"
+    },
+    {
+        "nombre": "Dario Caro",
+        "cargo": "Lider Chef",
+        "perfilPic": "../imgs/founder3.jpg"
+    },
+    {
+        "nombre": "Lorena Martinez",
+        "cargo": "Panadera Oficial",
+        "perfilPic": "../imgs/employee1.jpg"
+    },
+    {
+        "nombre": "Valería Rodriguez",
+        "cargo": "Panadera Oficial",
+        "perfilPic": "../imgs/employee2.jpg"
+    },
+    {
+        "nombre": "Luis Caro",
+        "cargo": "Panadero Oficial",
+        "perfilPic": "../imgs/employee3.jpg"
+    }
+]

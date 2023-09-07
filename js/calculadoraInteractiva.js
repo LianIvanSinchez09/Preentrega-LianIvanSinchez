@@ -61,23 +61,4 @@ function calculator() {
     alert(`Resultado: ${result}`);
 }
 
-// Impresora motivadora
-
-function imprimirNumeros() {
-    for (let i = 1; i <= 5; i++) {
-        alert(i);
-    }
-    alert("¡Persistencia y esfuerzo son la clave del éxito! ¡Sigue adelante!");
-}
-
-// Elección del usuario
-
-const userChoice = prompt('¿Desea usar la "Calculadora" o la "Impresora Motivadora" para imprimir números del 0 al 5 y recibir una frase motivadora? (Escribir "calculadora" o "impresora")').toLowerCase();
-
-if (userChoice === 'calculadora') {
-    calculator();
-} else if (userChoice === 'impresora') {
-    imprimirNumeros();
-}
-
 calculator();
