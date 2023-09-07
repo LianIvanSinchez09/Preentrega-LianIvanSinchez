@@ -1,20 +1,21 @@
 // Productos que se muestran en la pagina pages/productos.html
 
-function productosShowcase(id, nombre, descripcion, altDescription, origen, precio, imagen){
+function productosShowcase(id, nombre, descripcion, altDescription, altImg , origen, precio, imagen){
   this.id = id;
   this.nombre = nombre;
   this.descripcion = descripcion;
   this.altDescription = altDescription;
+  this.altImg = altImg;
   this.origen = origen;
   this.precio = precio;
   this.imagen = imagen;
 }
 
 const showcase = [
-  new productosShowcase(1, "Mix Regional", "Sabores de la patagonia", "Recetas regionales", "Mix totalmente Argentino", 350, "../imgs/products-pngs/product-1.png"),
-  new  productosShowcase(2, "Cheesecake Festivo", "Ideal para reuniones empresariales", "Té con amigas" , "Elaborado con los mejores productos", 550, "../imgs/products-pngs/product-2.png"),
-  new  productosShowcase(3, "Cheesecake Tradicional", "Receta de la abuela", "Elaborado con la tradición que nos caracteriza" , "Regala un toque de dulzura con el más exquisito sabor", 150, "../imgs/products-pngs/product-3.png"),
-  new  productosShowcase(4, "Arte en Cupcake", "Diseños a pedido del cliente", "Realizado por nuestros mejores artistas en Cupcake" , "Regala felicidad", 300, "../imgs/products-pngs/product-4.png"),
+  new productosShowcase(1, "Mix Regional", "Sabores de la patagonia", "Recetas regionales", "mix-regional" ,  "Mix totalmente Argentino", 350, "../imgs/products-pngs/product-1.png"),
+  new  productosShowcase(2, "Cheesecake Festivo", "Ideal para reuniones empresariales", "Té con amigas" , "cheesecake-festivo" , "Elaborado con los mejores productos", 550, "../imgs/products-pngs/product-2.png"),
+  new  productosShowcase(3, "Cheesecake Tradicional", "Receta de la abuela", "Elaborado con la tradición que nos caracteriza" , "cheesecake-tradicional" ,"Regala un toque de dulzura con el más exquisito sabor", 150, "../imgs/products-pngs/product-3.png"),
+  new  productosShowcase(4, "Arte en Cupcake", "Diseños a pedido del cliente", "Realizado por nuestros mejores artistas en Cupcake" , "arte-en-cupcake" , "Regala felicidad", 300, "../imgs/products-pngs/product-4.png"),
 ];
 
 function showProducts(){
@@ -25,7 +26,7 @@ function showProducts(){
       publicacionProducto.classList.add("column-products", "d-flex", "gap-5", "justify-content-center", "align-items-center");
       publicacionProducto.innerHTML = `
       <div class="product-container">
-          <img src="${showc.imagen}" alt="Mix Regional">
+          <img src="${showc.imagen}" alt="${showc.altImg}">
       </div>
       <div class="x-transition text-products-container">
           <h2 class="text-dark">${showc.nombre}</h3>
