@@ -42,7 +42,6 @@ const modal = document.querySelector('.modal');
 const openModals = document.querySelectorAll('.modal_key');
 const closeModal = document.querySelector('.modal_close');
 const modalContainer = document.querySelector('.modal_container');
-const empleados = "../json/miembros.json";
 
 // iteraracion a traves de cada boton de apertura de modal
 openModals.forEach((openModalButton, index) => {
@@ -50,7 +49,7 @@ openModals.forEach((openModalButton, index) => {
         e.preventDefault();
 
         // solicitud GET usando fetch para obtener el JSON de empleados
-        fetch(empleados)
+        fetch('../json/miembros.json')
             .then(response => response.json())
             .then(data => {
                 // obtener el empleado correspondiente al botón que se hizo clic
