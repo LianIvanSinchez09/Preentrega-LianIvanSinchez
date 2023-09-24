@@ -1,3 +1,5 @@
+
+
 // Productos que se muestran en la pagina pages/productos.html
 
 function productosShowcase(id, nombre, descripcion, altDescription, altImg , origen, precio, imagen){
@@ -16,34 +18,7 @@ const showcase = [
   new  productosShowcase(2, "Cheesecake Festivo", "Ideal para reuniones empresariales", "Té con amigas" , "cheesecake-festivo" , "Elaborado con los mejores productos", 550, "../imgs/products-pngs/product-2.png"),
   new  productosShowcase(3, "Cheesecake Tradicional", "Receta de la abuela", "Elaborado con la tradición que nos caracteriza" , "cheesecake-tradicional" ,"Regala un toque de dulzura con el más exquisito sabor", 150, "../imgs/products-pngs/product-3.png"),
   new  productosShowcase(4, "Arte en Cupcake", "Diseños a pedido del cliente", "Realizado por nuestros mejores artistas en Cupcake" , "arte-en-cupcake" , "Regala felicidad", 300, "../imgs/products-pngs/product-4.png"),
-];
-
-function showProducts(){
-  const productContainer = document.getElementById("product");
-
-  showcase.forEach(showc => {
-      const publicacionProducto = document.createElement('div');
-      publicacionProducto.classList.add("column-products", "d-flex", "gap-5", "justify-content-center", "align-items-center");
-      publicacionProducto.innerHTML = `
-      <div class="product-container">
-          <img src="${showc.imagen}" alt="${showc.altImg}">
-      </div>
-      <div class="x-transition text-products-container">
-          <h2 class="text-dark">${showc.nombre}</h3>
-          <p class="fs-6">• ${showc.descripcion}</p>
-          <p class="fs-6">• ${showc.altDescription}</p>
-          <p class="fs-6">• ${showc.origen}</p>
-          <div class="mb-5">
-            <button class="main-btn" type="button" onclick="agregarItem('${showc.nombre}', ${showc.precio})">Añadir al Carrito</button>
-          </div>
-      </div>
-      `;
-      productContainer.appendChild(publicacionProducto);
-  }
-  );
-}
-
-showProducts();
+]
 
 let carrito = [];
 
@@ -74,7 +49,7 @@ function actualizarCarro() {
     `;
     ;
   }
-  function agregarItem(nombre, precio) {
+function agregarItem(nombre, precio) {
     const nuevoProducto = {
         nombre: nombre,
         precio: precio
@@ -82,7 +57,40 @@ function actualizarCarro() {
     carrito.push(nuevoProducto);
     actualizarCarro();
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    Swal.fire({
+      title: '¡Producto agregado!',
+      icon: 'success',
+      timer: 1850,
+      position: 'top-end'
+    })
 }
+function showProducts(){
+  const productContainer = document.getElementById("product");
+
+  showcase.forEach(showc => {
+      const publicacionProducto = document.createElement("div");
+      publicacionProducto.classList.add("column-products", "d-flex", "gap-5", "justify-content-center", "align-items-center");
+      publicacionProducto.innerHTML = `
+      <div class="product-container">
+          <img src="${showc.imagen}" alt="${showc.altImg}">
+      </div>
+      <div class="x-transition text-products-container">
+          <h2 class="text-dark">${showc.nombre}</h3>
+          <p class="fs-6">• ${showc.descripcion}</p>
+          <p class="fs-6">• ${showc.altDescription}</p>
+          <p class="fs-6">• ${showc.origen}</p>
+          <div class="mb-5">
+            <button class="open-modal main-btn" type="button" onclick="agregarItem('${showc.nombre}', ${showc.precio})">Añadir al Carrito</button>
+          </div>
+      </div>
+      `;
+      productContainer.appendChild(publicacionProducto);
+  }
+  );
+}
+
+showProducts();
+
 function borrarItems(index){
   carrito.splice(index, 1);
   actualizarCarro();

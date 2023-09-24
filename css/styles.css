@@ -11,7 +11,7 @@
   padding: 2rem;
 }
 
-.y-transition, .card-icons, header {
+.y-transition, .card-icons, .modal_container, header {
   animation: 1.2s ease transitionY;
 }
 
@@ -36,6 +36,10 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.none {
+  display: none;
 }
 
 * {
@@ -160,6 +164,76 @@ nav {
 .secondary-btn:hover, .secondary-btnfocus {
   background-color: black;
   outline-offset: 2px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.modal_container {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  grid-auto-columns: 100%;
+  gap: 1em;
+  background-color: #fff;
+}
+
+.modal_img {
+  width: 90%;
+  max-width: 300px;
+}
+
+.modal_close {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+
+.btn-2 {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+
+.btn-2:hover {
+  color: #f26250;
+  background-color: #fff;
+}
+
+.modal_close:hover {
+  color: #f26250;
+  background-color: #fff;
+}
+
+.modal_show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
 }
 
 .title-cover {

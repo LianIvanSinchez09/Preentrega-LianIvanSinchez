@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/1eac27419e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/8.0.0/react-toastify.css">
 </head>
 <body>
   <header>
@@ -21,7 +22,7 @@
       <div class="navbar-main">
         <a class="display-4" href="../index.html">Los Cuatro Alamos</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars fa-fade fa-2x1" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-bars fa-2x1" style="color: #ffffff;"></i>
         </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav navbar-links">
@@ -31,14 +32,13 @@
               <li><a class="nav-item link-nav display-6" href="../pages/contacto.html">Contactos</a></li>
               <li>
               <div class="dropdown">
-                <i class=" link-nav display-6 fas fa-shopping-cart fa-fade dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="link-nav display-6 fas fa-shopping-cart dropdown-toggle" style="color: #ffffff;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 </i>
                 <ul class="dropdown-menu stay-open" aria-labelledby="dropdownMenuButton1">
                   <div class="d-flex flex-column gap-3 p-3">
                     <h5 id="total" class="position-fixed text-dark">Total: 0.00</h5>
                     <div id="carrito" class="mt-2 mb-2">
                       <!-- Aquí se mostrarán los productos en el carrito -->
-                      
                     </div>
                   </div>
                 </ul>
@@ -61,7 +61,6 @@
         <div id="product">
           <!-- productos añadidos en js/productos -->
         </div>
-
     </section>
     </main>
     <footer class="footer text-white">
@@ -75,15 +74,17 @@
           <div class="col-md-6">
             <h5 class="display-5">Enlaces</h5>
             <ul class="list-unstyled">
-              <!-- links añadidos con .map en js/footerlinks -->
+              <!-- links añadidos con .map en js/body.js -->
             </ul>
           </div>
         </div>
       </div>
       <p class="footer-line text-center fs-3">Lian Ivan Sinchez</p>
     </footer>
-    <script src="../js/footerLinks.js"></script>
     <script src="../js/carroDeCompras.js"></script>
+    <script src="../js/body.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/8.0.0/react-toastify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

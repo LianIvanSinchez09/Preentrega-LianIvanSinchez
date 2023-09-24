@@ -1,32 +1,50 @@
 [
     {
-        "nombre": "Gael Huertas",
+        "nombre": "Gael",
+        "apellido": "Huertas",
         "cargo": "Lider de Marketing",
-        "perfilPic": "../imgs/founder1.jpg"
+        "perfilPic": "../imgs/founder1.jpg",
+        "alt": "",
+        "desc": "Gael Huertas es el estratega detrás del éxito de Los Cuatro Alamos. Como Líder de Marketing, su creatividad y visión han llevado la panadería a nuevas alturas. Gael es un apasionado de conectar con la comunidad y difundir la alegría de nuestros productos a través de campañas innovadoras. Su enfoque en la calidad y la autenticidad asegura que cada comunicación y estrategia refleje la esencia de Los Cuatro Alamos."
     },
     {
-        "nombre": "Julián Martos",
+        "nombre": "Julián",
+        "apellido": "Martos",
         "cargo": "Communinty Manager",
-        "perfilPic": "../imgs/founder2.jpg"
+        "perfilPic": "../imgs/founder2.jpg",
+        "alt": "",
+        "desc": "Julián Martos es el motor detrás de nuestra comunidad en línea. Como Community Manager, Julián es un experto en crear contenido atractivo y fomentar relaciones sólidas con nuestros clientes. Su pasión por la panadería brilla a través de cada publicación y respuesta."
     },
     {
-        "nombre": "Dario Caro",
+        "nombre": "Dario",
+        "apellido": "Caro",
         "cargo": "Lider Chef",
-        "perfilPic": "../imgs/founder3.jpg"
+        "perfilPic": "../imgs/founder3.jpg",
+        "alt": "",
+        "desc": "Darío Caro es el maestro detrás de los sabores de Los Cuatro Alamos. Como Líder Chef, su experiencia culinaria y creatividad son la base de nuestros productos excepcionales. Su dedicación a la calidad y la innovación culinaria ha convertido a Los Cuatro Alamos en un destino gastronómico de renombre."
     },
     {
-        "nombre": "Lorena Martinez",
+        "nombre": "Lorena",
+        "apellido": "Martinez",
         "cargo": "Panadera Oficial",
-        "perfilPic": "../imgs/employee1.jpg"
+        "perfilPic": "../imgs/employee1.jpg",
+        "alt": "",
+        "desc": ""
     },
     {
-        "nombre": "Valería Rodriguez",
+        "nombre": "Valería",
+        "apellido": "Rodriguez",
         "cargo": "Panadera Oficial",
-        "perfilPic": "../imgs/employee2.jpg"
+        "perfilPic": "../imgs/employee2.jpg",
+        "alt": "",
+        "desc": ""
     },
     {
-        "nombre": "Luis Caro",
+        "nombre": "Luis",
+        "apellido": "Caro",
         "cargo": "Panadero Oficial",
-        "perfilPic": "../imgs/employee3.jpg"
+        "perfilPic": "../imgs/employee3.jpg",
+        "alt": "",
+        "desc": ""
     }
 ]
