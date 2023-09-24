@@ -42,7 +42,7 @@ const modal = document.querySelector('.modal');
 const openModals = document.querySelectorAll('.modal_key');
 const closeModal = document.querySelector('.modal_close');
 const modalContainer = document.querySelector('.modal_container');
-const empleados = "../json/miembros.json";
+const empleados = "json/miembros.json";
 
 // iteraracion a traves de cada boton de apertura de modal
 openModals.forEach((openModalButton, index) => {
