@@ -42,7 +42,7 @@ const modal = document.querySelector('.modal');
 const openModals = document.querySelectorAll('.modal_key');
 const closeModal = document.querySelector('.modal_close');
 const modalContainer = document.querySelector('.modal_container');
-const empleados = "/json/miembros.json";
+const empleados = "json/miembros.json";
 
 // iteraracion a traves de cada boton de apertura de modal
 openModals.forEach((openModalButton, index) => {
@@ -65,10 +65,10 @@ openModals.forEach((openModalButton, index) => {
                     <a href="#" class="modal_close">Cerrar</a>
                 `;
 
-                // Insertar el contenido en el modal
+                // insertar el contenido en el modal
                 modalContainer.innerHTML = profileContent;
 
-                // Mostrar el modal
+                // mostrar el modal
                 modal.classList.add('modal_show');
             });
     });
